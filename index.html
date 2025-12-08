@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princess Kamere | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <h2 class="logo">PK</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+   <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <img src="images/me-hackathon.jpeg" alt="Princess Kamere" class="profile-pic">
+        <div class="hero-text fade-in">
+            <h1>Princess Kamere</h1>
+            <p class="tagline">CISO Certified Support Technician</p>
+            <p>Cybersecurity Student • IT Support • IT Enthusiast</p>
+                        <div class="hero-ctas">
+                            <a href="#about" class="btn">Explore My Work</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        </div>
+        </div>
+    </div>
+</header>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I'm Princess, a curious, methodical cybersecurity professional-in-training with a knack for solving
+            real-world problems. Currently pursuing an MSc in Cybersecurity, I bridge laboratory rigor from
+            biotechnology with hands-on IT support experience to build secure, reliable systems. I thrive in
+            fast-paced hackathons, international collaborations like Erasmus+, and turning complex issues into
+            clear, auditable solutions.
+        </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+
+        <div class="card fade-in">
+            <h3>IT Intern, Louislanier (2025–Present)</h3>
+            <ul>
+                <li>Assisted with website updates on the iDoSell platform, applying content changes and minor layout fixes under guidance.</li>
+                <li>Helped test new features and documented reproducible steps for issues discovered during QA sessions.</li>
+                <li>Supported image and link checks, reporting assets that needed resizing or replacement to the web team.</li>
+
+    <!-- Lightbox script: open cert images in an in-page modal -->
+    <script>
+    (function(){
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox) return;
+        const lbImg = lightbox.querySelector('.lightbox-img');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+
+        function openLightbox(src, alt) {
+            lbImg.src = src;
+            lbImg.alt = alt || '';
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            lbImg.src = '';
+            document.body.style.overflow = '';
+        }
+
+        // Attach click handlers to any certificate image inside .cert-list
+        document.querySelectorAll('.cert-list .cert-img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e){
+                // If wrapped in an anchor, use its href as the full-size source
+                const anchor = this.closest('a');
+                const src = anchor ? anchor.getAttribute('href') || this.src : this.src;
+                e.preventDefault();
+                openLightbox(src, this.alt);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e){ if (e.target === this) closeLightbox(); });
+        document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLightbox(); });
+    })();
+    </script>
+                <li>Provided first-line support for internal users and helped maintain simple how-to notes for common tasks.</li>
+            </ul>
+        </div>
+
+        <div class="card fade-in delay-1">
+            <h3>Quality Control Intern, Zimbabwe Pharmaceuticals (2021)</h3>
+            <ul>
+                <li>Performed rigorous physicochemical testing with strict SOP adherence, delivering reliable, auditable results.</li>
+                <li>Managed critical documentation and traceability, skills that map directly to security audit trails and compliance reporting.</li>
+                <li>Collaborated across teams to investigate anomalies, apply corrective actions, and improve process controls, transferable to incident investigations and root-cause analysis.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+        <h2>Education</h2>
+        <div class="card">
+            <p><strong>MSc Cybersecurity</strong> (2025–Present)<br>UITM Rzeszów, Poland</p>
+            <p>Specialized master's program covering advanced cybersecurity topics including network security, incident response, penetration testing, and security governance. Hands-on labs and real-world case studies prepare for professional roles in security operations and risk management.</p>
+        </div>
+        <div class="card">
+            <p><strong>BSc Biotechnology (Hons)</strong> (2018–2022)<br>NUST Zimbabwe</p>
+            <p>Comprehensive degree combining molecular biology, biochemistry, and laboratory techniques with business fundamentals. Developed strong analytical, documentation, and quality assurance skills applicable to regulatory compliance and systematic problem-solving in technical fields.</p>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section">
+        <h2>Certificates</h2>
+        <ul class="cert-list">
+            <li class="cert">
+                <div class="cert-head">Cisco CCST Cybersecurity <span class="cert-date">(2025–2030)</span></div>
+                <div class="cert-desc">Certification covering core cybersecurity fundamentals, network basics, and practical defensive techniques.</div>
+            </li>
+            <li class="cert">
+                <div class="cert-head">YouthPass <span class="cert-sub">Erasmus+</span> <span class="cert-date">(September 2025)</span></div>
+                <div class="cert-desc">Recognition of skills and learning outcomes acquired through Erasmus+ mobility and international projects.</div>
+            </li>
+            <li class="cert">
+                <div class="cert-head">Computer Operations & Packages, Hexco <span class="cert-date">(2017)</span></div>
+                <div class="cert-desc">Practical training in office productivity software, basic computer operations, and digital workflows.</div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- PARTICIPATION CERTIFICATES -->
+    <section class="section">
+        <h2>Participation Certificates</h2>
+        <ul class="cert-list participation-certs">
+            <li class="cert">
+                <div class="cert-head">HackYeah 2025</div>
+                <div class="cert-desc">Participated in HackYeah hackathon, showcasing innovative solutions.</div>
+                <a href="images/hackyeahcert.jpeg" target="_blank" rel="noopener noreferrer">
+                    <img src="images/hackyeahcert.jpeg" alt="HackYeah Certificate" class="cert-img">
+                </a>
+            </li>
+            <li class="cert">
+                <div class="cert-head">UITM Green Summer School 2025</div>
+                <div class="cert-desc">Completed intensive summer school program focusing on sustainability and professional development.</div>
+                <a href="images/summerschoolcert.jpeg" target="_blank" rel="noopener noreferrer">
+                    <img src="images/summerschoolcert.jpeg" alt="Summer School Certificate" class="cert-img">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+     <!-- SKILLS -->
+    <section class="section">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <span>Networking</span>
+            <span>Troubleshooting</span>
+            <span>Customer Service</span>
+            <span>Linux</span>
+            <span>Windows</span>
+            <span>macOS</span>
+            <span>Problem Solving</span>
+            <span>Incident Response</span>
+            <span>Vulnerability Assessment</span>
+            <span>SIEM / Log Analysis</span>
+            <span>Python & Bash Scripting</span>
+            <span>Web Security Basics</span>
+            <span>Documentation & SOPs</span>
+            <span>Automation</span>
+            <span>Content Management</span>
+            <span>Bug Triage</span>
+            <span>QA Testing</span>
+            <span>Responsive Testing</span>
+            <span>Image Optimization</span>
+            <span>User Support & Ticketing</span>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+   <section id="gallery" class="section">
+    <h2>My Events & Experiences</h2>
+    <div class="events-grid">
+    <!-- HACKNATION ---->
+    <div class="event">
+        <h3>Hacknation 2025</h3>
+        <div class="slideshow-container hacknation-slides">
+            <div class="slide"><img src="images/hacknation1.jpeg" alt="Hacknation event photo"></div>
+            <div class="slide"><img src="images/hacknation2.jpeg" alt="Hacknation event photo"></div>
+            <div class="slide"><img src="images/hacknation3.jpeg" alt="Hacknation event photo"></div>
+            <div class="slide"><img src="images/hacknation4.jpeg" alt="Hacknation event photo"></div>
+
+            <a class="prev" onclick="plusSlides(-1, 'hacknation')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'hacknation')">&#10095;</a>
+            <!-- extra images removed; using named hacknation images only -->
+        </div>
+        <div class="dots hacknation-dots"></div>
+    </div>
+
+    <!-- BSIDESKRAKOW -->
+    <div class="event">
+        <h3>Bsideskrakow 2025</h3>
+        <div class="slideshow-container bsideskrakow-slides">
+            <div class="slide"><img src="images/bsideskrakow1.jpeg" alt="Bsideskrakow event photo"></div>
+            <div class="slide"><img src="images/bsideskrakow2.jpeg" alt="Bsideskrakow event photo"></div>
+
+            <a class="prev" onclick="plusSlides(-1, 'bsideskrakow')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'bsideskrakow')">&#10095;</a>
+            <!-- extra images removed; using named bsideskrakow images only -->
+        </div>
+        <div class="dots bsideskrakow-dots"></div>
+    </div>
+
+    <!-- HACKYEAH -->
+    <div class="event">
+        <h3>HackYeah 2025</h3>
+        <div class="slideshow-container hackathon-slides">
+            <div class="slide"><img src="images/hackyeah1.jpeg" alt=" Hackathon event photo"></div>
+            <div class="slide"><img src="images/hackyeah2.jpeg" alt="Hackathon event photo"></div>
+            <div class="slide"><img src="images/hackyeah3.jpeg" alt="Hackathon event photo"></div>
+            <div class="slide"><img src="images/hackyeah4.jpeg" alt="Hackathon event photo"></div>
+
+            <a class="prev" onclick="plusSlides(-1, 'hackathon')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'hackathon')">&#10095;</a>
+            <!-- extra images removed; using named hackyeah images only -->
+        </div>
+        <div class="dots hackathon-dots"></div>
+    </div>
+
+    <!-- SUMMER SCHOOL -->
+    <div class="event">
+        <h3>UITM Green Summer School</h3>
+        <div class="slideshow-container summer-slides">
+            <div class="slide"><img src="images/summerschool1.jpeg" alt="Summer School event photo"></div>
+            <div class="slide"><img src="images/summerschool2.jpeg" alt="Summer School event photo"></div>
+            <div class="slide"><img src="images/summerschool3.jpeg" alt="Summer School event photo"></div>
+            <div class="slide"><img src="images/summerschool4.jpeg" alt="Summer School event photo"></div>
+
+            <a class="prev" onclick="plusSlides(-1, 'summer')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'summer')">&#10095;</a>
+            <!-- extra images removed; using named summerschool images only -->
+        </div>
+        <div class="dots summer-dots"></div>
+    </div>
+
+    <!-- ERASMUS+ -->
+    <div class="event">
+        <h3>Erasmus+ Exchange</h3>
+        <div class="slideshow-container erasmus-slides">
+            <div class="slide"><img src="images/erasmus+1.jpeg" alt="Erasmus+ Exchange event photo"></div>
+            <div class="slide"><img src="images/erasmus+2.jpeg" alt="Erasmus+ Exchange event photo"></div>
+            <div class="slide"><img src="images/erasmus+3.jpeg" alt="Erasmus+ Exchange event photo"></div>
+            <div class="slide"><img src="images/erasmus+4.jpeg" alt="Erasmus+ Exchange event photo"></div>
+            <div class="slide"><img src="images/erasmus+5.jpeg" alt="Erasmus+ Exchange event photo"></div>
+
+            <a class="prev" onclick="plusSlides(-1, 'erasmus')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'erasmus')">&#10095;</a>
+            <!-- extra images removed; using named erasmus images only -->
+        </div>
+        <div class="dots erasmus-dots"></div>
+    </div>
+
+</section>
+<!-- LIGHTBOX MARKUP -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" class="lightbox-img">
+    </div>
+</div>
+<script>
+let slideIndexes = {
+    hacknation: 1,
+    bsideskrakow: 1,
+    hackathon: 1,
+    summer: 1,
+    erasmus: 1
+};
+
+function showSlides(eventName) {
+    let container = document.querySelector(`.${eventName}-slides`);
+    if (!container) return;
+
+    let slides = container.getElementsByClassName("slide");
+
+    let dotsContainer = document.querySelector(`.${eventName}-dots`);
+    dotsContainer.innerHTML = "";
+
+    for (let i = 0; i < slides.length; i++) {
+        let dot = document.createElement("span");
+        dot.classList.add("dot");
+        dot.onclick = () => currentSlide(i + 1, eventName);
+        dotsContainer.appendChild(dot);
+    }
+
+    let dots = dotsContainer.getElementsByClassName("dot");
+
+    if (slideIndexes[eventName] > slides.length) slideIndexes[eventName] = 1;
+    if (slideIndexes[eventName] < 1) slideIndexes[eventName] = slides.length;
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndexes[eventName] - 1].style.display = "block";
+    dots[slideIndexes[eventName] - 1].classList.add("active");
+}
+
+function plusSlides(n, eventName) {
+    slideIndexes[eventName] += n;
+    showSlides(eventName);
+}
+
+function currentSlide(n, eventName) {
+    slideIndexes[eventName] = n;
+    showSlides(eventName);
+}
+
+/* INIT ALL SLIDE SHOWS */
+showSlides("hacknation");
+showSlides("bsideskrakow");
+showSlides("hackathon");
+showSlides("summer");
+showSlides("erasmus");
+// Auto-advance each slideshow every 4 seconds
+(function(){
+    Object.keys(slideIndexes).forEach(eventName => {
+        setInterval(() => {
+            plusSlides(1, eventName);
+        }, 4000);
+    });
+})();
+</script>
+<script>
+// Parallax effect for profile picture (subtle)
+(() => {
+    const pic = document.querySelector('.profile-pic');
+    if (!pic) return;
+    let lastY = 0;
+    let ticking = false;
+    function onScroll() {
+        lastY = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const translate = Math.min(40, Math.max(-20, lastY * 0.06));
+                pic.style.transform = `translateY(${translate}px)`;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
+<script>
+// Apply per-image focal points: set object-position from data-focal if present
+(function(){
+    document.querySelectorAll('.slideshow-container .slide img').forEach(img => {
+        const focal = img.getAttribute('data-focal');
+        if (focal) {
+            img.style.objectPosition = focal;
+        }
+    });
+})();
+</script>
+
+    <!-- CONTACT -->
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:princesskamere16@gmail.com">princesskamere16@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/princess-kamere-83148521a" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+        <p>© 2025 Princess Kamere</p>
+    </footer>
+
+</body>
+</html>

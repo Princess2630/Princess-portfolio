@@ -1,0 +1,277 @@
+/* Hero and layout styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+/* GENERAL STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #031224 0%, #0f3050 45%, #264b8f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(2,12,28,0.6);
+    position: relative;
+    z-index: 3;
+}
+
+.hero-ctas { display: flex; gap: 12px; align-items: center; margin-top: 10px; }
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.btn-secondary:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(41,106,255,0.18); background: rgba(255,255,255,0.04); }
+
+/* certificate hover animation */
+.cert { transition: transform .18s ease, box-shadow .25s ease, background .25s ease; }
+.cert:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 18px 40px rgba(39,61,96,0.45); }
+
+/* slideshow image positioning: prefer showing faces centered-high */
+.slideshow-container .slide img { object-fit: cover; object-position: center 35%; }
+
+/* footer / contact centering */
+/* Footer styling: visible & centered */
+#contact { text-align: center; padding: 28px 20px; background: linear-gradient(90deg,#071426,#0f2a44); color: #eaf0ff; border-top: 1px solid rgba(255,255,255,0.03); }
+#contact a { color: #dfe9ff; text-decoration: underline; }
+
+/* small niceties for skill tags */
+.skill-list span { background: linear-gradient(90deg,#f0f4ff,#e8eefc); color: #0b1630; padding: 8px 12px; }
+
+@media (max-width: 800px) {
+    .hero { height: 60vh; }
+    .hero-content { flex-direction: column; text-align: center; }
+    .profile-pic { width: 140px; height: 140px; }
+    .hero-text h1 { font-size: 36px; }
+    .hero-text p { font-size: 18px; }
+}
+
+/* Dark overlay so text is readable */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+/* Text on top of overlay */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.tagline {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 6px 0 10px 0;
+    opacity: 0.95;
+}
+
+/* NAV STYLING - inline logo and links */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+nav .logo {
+    margin: 0;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 28px;
+    background: #6a8dff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #4a6aff;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTIONS */
+.section, .about {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* SKILLS */
+.skill-list span {
+    display: inline-block;
+    background: #e5e9ff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Certificate badges */
+.cert-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; padding: 0; list-style: none; align-items: start; }
+.cert { background: linear-gradient(90deg,#29406b,#476aa8); color: white; padding: 10px; border-radius: 10px; font-weight: 700; box-shadow: 0 6px 18px rgba(39,61,96,0.35); display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; min-height: 160px; font-size: 0.9em; }
+.cert-head { font-weight: 800; }
+.cert-desc { font-weight: 400; margin-top: 8px; opacity: 0.95; font-size: 0.9em; line-height: 1.2; margin-bottom: 8px; }
+.cert-img { width: 100%; height: auto; max-height: 140px; border-radius: 6px; margin-top: 6px; object-fit: contain; display: block; }
+.cert .cert-date, .cert .cert-sub { font-weight: 500; margin-left: 8px; opacity: 0.95; font-size: 0.9em; }
+
+/* Lightbox modal for certificate viewing */
+.lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.78); z-index: 9999; }
+.lightbox.open { display: flex; }
+.lightbox-inner { position: relative; max-width: 92%; max-height: 92%; padding: 8px; display: flex; align-items: center; justify-content: center; }
+.lightbox-img { max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); background: #fff; }
+.lightbox-close { position: absolute; top: -12px; right: -12px; background: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 20px; line-height: 1; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.3); }
+.lightbox-close:focus { outline: 2px solid rgba(106,141,255,0.6); }
+
+/* Section styling */
+.section { padding: 44px 20px; max-width: 1000px; margin: 28px auto; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)); border-radius: 12px; box-shadow: 0 6px 30px rgba(4,20,40,0.06); }
+.section h2 { position: relative; padding-bottom: 8px; }
+.section h2:after { content: ""; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: linear-gradient(90deg,#6a8dff,#4a6aff); border-radius: 4px; }
+
+/* Slideshow styles */
+.slideshow-container { position: relative; max-width: 900px; margin: 12px 0 28px; }
+.slideshow-container .slide { display: none; }
+.slideshow-container .slide img { width: 100%; height: 420px; object-fit: cover; border-radius: 8px; }
+/* show full image: zoom out so entire photo visible */
+.slideshow-container .slide img { object-fit: contain; object-position: center 20%; background: linear-gradient(180deg,#08111a,#0b2030); height: 420px; }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.prev { left: 8px; }
+.next { right: 8px; }
+.dots { text-align: center; margin-top: 8px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.35); margin: 0 6px; cursor: pointer; }
+.dot.active { background: #6a8dff; box-shadow: 0 0 8px rgba(106,141,255,0.45); }
+
+@media (max-width: 800px) { .slideshow-container .slide img { height: 220px; } }
+
+/* Events grid: two events per row */
+.events-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+@media (max-width: 900px) { .events-grid { grid-template-columns: 1fr; } }
+
+/* Make sure each event card has padding/background */
+.event { background: rgba(255,255,255,0.02); padding: 18px; border-radius: 10px; box-shadow: 0 8px 24px rgba(4,20,40,0.06); }
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #6a8dff;
+    color: white;
+}
